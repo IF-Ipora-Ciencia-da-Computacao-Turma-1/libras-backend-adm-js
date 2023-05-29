@@ -23,8 +23,8 @@ function uploadImagem(){
 
   uploadTask.on("state_changed", (snapshot)=>{
     console.log(snapshot);
-    porcentVal = Math.floor((snapshot.bytesTransferred/snapshot.totalbytes)*100);
-    console.log(porcentVal);
+    //porcentVal = Math.floor((snapshot.bytesTransferred/snapshot.totalbytes)*100);
+    //console.log(porcentVal);
   }, (error)=>{
     console.log("Error = ", error);
   }, ()=>{

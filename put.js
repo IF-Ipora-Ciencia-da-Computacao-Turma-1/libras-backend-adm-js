@@ -18,13 +18,12 @@ function getFile(e){
 }
 
 function uploadImagem(){
-  let storageRef = firebase.storage().ref("images/"+fileName);
+  // let storageRef = firebase.storage().ref("images/"+fileName);
+  let storageRef = firebase.storage().ref(""+fileName);
   let uploadTask = storageRef.put(fileIten);
 
   uploadTask.on("state_changed", (snapshot)=>{
     console.log(snapshot);
-    //porcentVal = Math.floor((snapshot.bytesTransferred/snapshot.totalbytes)*100);
-    //console.log(porcentVal);
   }, (error)=>{
     console.log("Error = ", error);
   }, ()=>{
@@ -36,7 +35,8 @@ function uploadImagem(){
 }
 
 const storage = firebase.storage();
-const listRef = storage.ref('images/');
+// const listRef = storage.ref('images/');
+const listRef = storage.ref('');
 
 const list = document.getElementById("content");
 
@@ -60,11 +60,9 @@ function getImage(){
   });
 }
 
-
-// const imageRef = storage.ref('images/sinal1.gif');
-
 function delet(name) {
-  const imageRef = storage.ref('images/'+name);
+  // const imageRef = storage.ref('images/'+name);
+  const imageRef = storage.ref(''+name);
 
   imageRef.delete()
   .then(() => {

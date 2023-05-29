@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" class="InputFile" id="InputFile" onchange="getFile(event)" accept="image/gif">
+    <button onclick="uploadImagem()">Subir</button>
+    <button onclick="getImage()">Listar</button>
+    <button onclick="delet()">Apagar</button>
+    <div class="conteudo" id="content"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="./put.js"></script>
+</body>
+</html>
